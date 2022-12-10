@@ -1,0 +1,89 @@
+body {
+    font-size: 16px;
+    font-family: arial, monospace
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    margin: 0px auto;
+    height: 100vh;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app > div {
+    flex: 1;
+    height: 80%;
+}
+
+#time-section,
+#player-section,
+#mood-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#player-section {
+    position: relative;
+}
+
+#player-section svg{
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+#timer-label {
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    font-size: 4rem
+}
+
+button {
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 500ms ease;
+}
+
+button:not(#player-toggle):hover {
+    color: rgba(0, 0, 0, 1);
+    background: white;
+}
+
+#mood-section button {
+    border-radius: 50%;
+}
+
+button#sunny-mood:hover {
+    background: lightcoral;
+}
+
+button#rainy-mood:hover {
+    background: mediumslateblue;
+}
+
+video {
+    z-index: -10;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+}
+

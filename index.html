@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./app.js" defer></script>
+        <title>Meditation app</title>
+    </head>
+    <body>
+        <div id="app">
+            <video src="./video/rain.mp4" loop></video>
+            <div id="time-section">
+                <button data-time="120">2 min</button>
+                <button data-time="300">5 min</button>
+                <button data-time="600">10 min</button>
+            </div>
+            <div id="player-section">
+                <h3 id="timer-label">10:00</h3>
+                <button id="player-toggle">
+                    <img src="./svg/play.svg" alt="">
+                </button>
+                <svg id="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                </svg>
+                <svg id="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                </svg>
+                <audio id="song">
+                    <source src="./sounds/rain.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="mood-section">
+                <button
+                    id="sunny-mood"
+                    data-sound="./sounds/beach.mp3"
+                    data-video="./video/beach.mp4">
+                    <img src="./svg/beach.svg" alt="An icon of a sun">
+                </button>
+                <button
+                    id="rainy-mood"
+                    data-sound="./sounds/rain.mp3"
+                    data-video="./video/rain.mp4">
+                    <img src="./svg/rain.svg" alt="An icon of a rainy cloud">
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
+
